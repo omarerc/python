@@ -1,3 +1,10 @@
+def get_value():
+  while True:
+    try:
+      return int(input("What is n? "))
+    except ValueError:
+      print("X is not a valid value. Try again!")
+
 def loop_while(n):
   i  = 0
   print("Printing with while loop:")
@@ -15,9 +22,12 @@ def print_asterisk(n):
   print("meow\n" * n, end="")
 
 def main():
-  n = int(input("What's n?"))
-  loop_while(n)
-  loop_for(n)
-  print_asterisk(n)
+  try:
+    n = get_value()
+    loop_while(n)
+    loop_for(n)
+    print_asterisk(n)
+  except:
+    print("n is not an Integer")
 
 main()
