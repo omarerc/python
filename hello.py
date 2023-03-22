@@ -1,9 +1,14 @@
+from series import base2
+
 def main():
   # Ask user name
   name = input("What's your name? ")
   message = hello(name)
   print(message)
   loop()
+  n = input("Enter a number: ")
+  result = base2(n)
+  print(f"2^{n}: {result}")
 
 def loop():
   i = 0
